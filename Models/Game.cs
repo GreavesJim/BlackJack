@@ -52,7 +52,7 @@ namespace blackjack.Models
       {
         score += PlayerCards[i].Value;
         Console.WriteLine($"You have {CompCards[0].Name}");
-        Console.WriteLine($"Your total is {score}")
+        Console.WriteLine($"Your total is {score}");
       }
 
 
@@ -61,6 +61,11 @@ namespace blackjack.Models
     public void Hit()
     {
 
+      Random rng = new Random();
+      int index = rng.Next(Cards.Count);
+      Card Dealt = Cards[index];
+      PlayerCards.Add(Dealt);
+      Cards.RemoveAt(index);
 
 
 
@@ -68,6 +73,9 @@ namespace blackjack.Models
 
     public void Validate()
     {
+
+
+
 
     }
 

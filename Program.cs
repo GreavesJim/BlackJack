@@ -1,12 +1,29 @@
 ﻿using System;
 
 namespace blackjack
+
 {
-    class Program
+  class Program
+  {
+    static void Main(string[] args)
     {
-        static void Main(string[] args)
-        {
-            Console.WriteLine("Hello World!");
-        }
+
+      bool playing = true;
+      while (playing)
+      {
+        int playerscore;
+        int compscore;
+
+
+
+
+
+
+
+
+
+
+      }
     }
+  }
 }
