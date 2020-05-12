@@ -66,7 +66,7 @@ namespace blackjack.Models
       Card Dealt = Cards[index];
       PlayerCards.Add(Dealt);
       Cards.RemoveAt(index);
-
+      Validate();
 
 
     }
@@ -78,6 +78,36 @@ namespace blackjack.Models
 
 
     }
+    public void Setup()
+    {
 
+
+
+
+
+
+    }
+    public void Stay()
+    {
+      int score = 0;
+      for (int i = 0; i < CompCards.Count; i++)
+      {
+        score += CompCards[i].Value;
+      }
+      if (score < 17)
+      {
+        Stay();
+      }
+      else if (score == 21)
+      {
+        PrintCards();
+        System.Console.WriteLine("You Lose");
+      }
+      else
+      {
+        PrintCards();
+
+      }
+    }
   }
 }
