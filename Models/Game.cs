@@ -86,6 +86,7 @@ namespace blackjack.Models
 
 
 
+
     }
     public void Stay()
     {
